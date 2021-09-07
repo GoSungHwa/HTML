@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영역 관련 태그</title>
+</head>
+<body>
+    <span>
+        aaadfaasfsadfdafdfasfasdfdsafdasfsdafasdfasf
+        <!-- 들어갈 공간이 있으면 옆으로 들어감
+             길어지면 양옆 스크롤바 생김 
+            크기 지정이 잘안댐 -->
+    </span>
+    <br>
+    <span>
+        bbb
+    </span>
+    <span>
+        aaa
+    </span>
+    <span>
+        aaa
+    </span>
+    <div style="width:100px; border: 1px soild black;">
+    ddddd
+</div>
+    <div style="width:200px; border: 1px soild black;">
+    cccc
+</div>
+
+<!-- inline은 width,height가 적용되지 않음. 적힌 내용의 길이만틈 적용됨
+    block은 width,height 작용됨. 하지만 해당라인에는 나 이외의 태그는 오지 못함
+    inline-block은 inline방식과 비슷하나  width,heigth가 적용됨.  -->
+
+<br>
+<h2>inline형태를 inline-block으로 변경 예시</h2>
+<span style="display: inline-block; width: 100px; border:1px solid black">
+    bbb
+</span>
+<span style="display: inline-block; width: 100px; border:1px solid black">
+    aaa
+</span>
+<span style="display: inline-block; width: 100px; border:1px solid black">
+    aaa
+</span>
+<div style="display: inline-block; width:200px; border:1px solid black;">
+    ddddd
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크와 라디오-input 태그</title>
+</head>
+
+<body>
+    <form action="#" method="get">
+        성별 : <input type="radio" name="g" value="male"> 남
+        <input type="radio" name="g" value="female"> 여
+
+        <br>
+
+        취미 : <input type="checkbox" name="h" value="reading" id="h1">
+        <label for="h1">독서</label>
+        <input type="checkbox" name="h" value="baseball" id="h2"> 야구
+
+        <br>
+        <input type="color" name="color1"><br>
+        <input type="date" name="date1"><br>
+        <input type="datetime" name="dt1"><br>
+
+        넘버 <input type="number" name="name1"><br>
+        랭지 <input type="range" name="rg1" min="0" max="10" step="2"><br>
+        프로그래스 <progress max="10" value="5" ></progress><br> 
+        <!--progress 출력용인듯?? -->
+        서치 <input type="search" name="sh1"><br>
+        텔 <input type="tel" name="t1"><br>
+        <lable for="id11">라벨 누르면 커서가 생김</lable>
+        이메일 <input type="email" name="em1"><br>
+        유알엘 <input type="url" name="ur1" value="https://"><br>
+<h3>여러 값 표현 태그</h3>
+        <lable for="id10">셀렉트라벨</lable>
+        <select name="s" >
+            <optgroup label="색상">
+            <option value="s1" selected>옵션1 </option>
+            <option value="s2">옵션2 </option>
+            <option value="s3">옵션3 </option>
+        </optgroup>
+        <optgroup label="사이즈">
+            <option value="s4">옵션4 </option>
+            <option value="s5">옵션5 </option>
+            <option value="s6">옵션6 </option>
+        </optgroup>
+        </select>
+<!-- datalist는 짝궁이 필요하다(iniput) -->
+<input list="dl1">
+        <datalist id="dl1" name="dl1">
+            <option>
+                <option value="s7" label="옵션7"></option>
+                <option value="s8">옵션8 </option>
+                <option value="s9">옵션9 </option>
+            </option>
+        </datalist>
+        <br>
+        <meter min="5" max="10" value="6"></meter>
+        <meter value="0.1" low="0.2" optimum="0.5"></meter>
+
+        <br><input type="submit">
+        <input type="submit" value="이것도 이름 바꾸기가능">
+        <button type="submit">버튼 이용시 이름 지정 가능</button>
+        <!-- 문법적인 차이밖에 없음 별 차이 없음 
+        input submit은 꾸미기가 좀 어렵고
+        button submit이 좀 더 꾸밀 수 있따.-->
+    </form>
+</body>
+
+</html>

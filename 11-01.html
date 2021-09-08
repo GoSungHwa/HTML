@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 선택자 연습</title>
+   
+    <style>
+        *{background-color:lightslategray;
+          color: hotpink;
+        }
+        p,span{
+            color: blue;
+        }
+        /* span{
+            color: blue;
+        } */
+        #intro{
+            color: brown;
+        }
+        .first{
+            color: darkturquoise;
+        }
+        .second{
+            color: floralwhite;
+        }
+        .f20{
+            font-size: 40px;
+            color: magenta;   
+        }
+        .f40{
+            font-size: 40px;
+        }
+        #intro.first{
+            color: wheat;
+        }
+        .first f40{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="first">안녕하세요오오옹오</h1>
+    안녕하세요.
+    <p id="intro" class="first f40">안녕하세요오오오오올</p>
+    <p class="first f20">하이하이이이이이</p>
+    <p class="second f20">낑낑낑</p>
+    <p class="second">낑낑낑끼잉</p>
+    <span>ddddddddddddddddddd</span>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인&회원가입</title>
+    <style>
+    .btn{
+        padding-left: 200px;
+    }
+    .n1{
+        padding: 0 60px;
+    }
+    .n2{
+        padding: 0 52px;
+    }
+    .n3{
+        margin: 0 44px;
+    }
+    .n4{
+      padding: 0 25px;
+    }
+    .n5{
+        padding: 0 8px
+    }
+    .n6{
+        padding: 0 62px;
+    }
+    .n7{
+        padding: 0 54px;
+    }
+    .n8{
+        padding: 46px;
+    }
+    .n9{
+        padding: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <hr color="orange">
+    <form method="POST" action="#">
+        <strong class="n1">이름</strong> <input type="text" name="user"><br>
+        <strong class="n2">아이디</strong> <input type="text" name="id">
+        <a href="#"><u>중복확인</u></a><br>
+        <strong class="n3">비밀번호</strong> <input type="password" name="pw" ><br>
+        <strong class="n4">비밀번호 확인</strong> <input type="text" name="rpw"><br>
+        <strong class="n5">비밀번호 힌트/답변</strong><select id="hint">
+            <option value="">선택하세요</option>
+            <option value="30">졸업한 초등학교 이름은?</option>
+            <option value="31">제일 친한 친구의 핸드폰 번호는?</option>
+            <option value="32">아버지 성함은?</option>
+            <option value="33">어머니 성함은?</option>
+            <option value="34">어릴적 내 별명은?</option>
+            <option value="35">가장 아끼는 물건은?</option>
+            <option value="36">좋아하는 동물은?</option>
+            <option value="37">좋아하는 색깔은?</option>
+            <option value="38">좋아하는 음식은?</option>
+        </select><br>
+        <strong class="n6">답변</strong><input type="text" name="answer"><br>
+        <strong class="n7">이메일</strong><input type="email" name="email"><br>
+        <strong class="n8">전화번호</strong><input type="text" name="phone"><br>
+        <strong class="n9">메일/sns 정보 수신</strong><input type="radio" name="snsck" value="mailok" checked>수신
+                                          <input type="radio" name="snsck" value="mailno" >수신거부
+         <hr color="orange">
+         <div class="btn">
+         <button type="submit" ><a href="index.html"></a>회원가입</button>
+         <button type="reset"><a href="#"></a>취소</button>
+        </div>
+    </form>
+    
+    
+</body>
+
+</html>

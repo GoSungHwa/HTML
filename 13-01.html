@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체</title>
+</head>
+
+<body>
+    <script>
+        // function hello(){
+        //     alert("Hello");
+        // }
+        // setInterval(hello,5000);
+
+        // setInterval(function(){
+        //     alert("hello");
+        // },1000);
+
+        // setTimeout(function(){
+        //     alert("Hello");
+        // },1000);
+
+        // var count=0;
+        // var tID=setInterval(function(){
+        //     count++;
+        //     alert(count);
+
+        //     if(count==5){
+        //         clearInterval(tID);
+        //     }
+        // },1000);
+
+        // setInterval(function(){
+        //     alert(parseInt(Math.random()*50)+50);
+        // },1000);
+
+        // var num = 345.678;
+        // num = Math.ceil(num * 100) / 100;
+        // console.log(num);
+
+        // var num = 345.678;
+        //     num = Math.floor(num * 100) / 100;
+        //     console.log(num); 
+
+        // var num = 345.678;
+        //     num = Math.round(num * 100) / 100
+        //     console.log(num);
+
+        // var str=new String("Hello");
+        // alert(str);
+
+        // document.write("Hello".length);
+
+        // var str=new String("Hello World");
+        // alert(str.length);
+
+        // var alpha="ABCDEFG";
+        // alert(alpha.charAt(3));
+
+        // var str="khacademy_KHACADEMY";
+        // var newstr=str.replace("academy","정보교육원");
+        // console.log(newstr);
+
+        // function splitString(str,separator){
+        //     var strArr=str.split(separator);
+        //     return strArr;
+        // }
+
+        // var str1="kh_케이에이치_KH";
+        // var str2="2016,2017,2018,2019";
+        // var str3="안녕, 나 자바스크립트야!";
+
+        // strArr1=splitString(str1,"_");
+        // strArr2=splitString(str2,",");
+        // strArr3=splitString(str3,"");
+
+        // console.log("["+strArr1+"]");
+        // console.log("["+strArr2+"]");
+        // console.log("["+strArr3+"]");
+
+        // var namestr="홍길동신사임당유관순";
+        // var name1=namestr.substring(0,3);
+        // var name2=namestr.substring(3,7);
+        // var name3=namestr.substring(7);
+
+        // console.log(name1);
+        // console.log(name2);
+        // console.log(name3);
+
+        // var strtrim="             white    Space     ";
+        // var newstr=strtrim.trim();
+        // console.log(newstr);
+
+        // var d=new Date();
+        // var hours=d.getHours();
+        // console.log(d);
+        // console.log(hours);
+
+        // var d=new Date();
+        // var date=d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate()+",";
+        // switch(d.getDay()){
+        //     case 0:
+        //         date+="일";
+        //         break;
+        //     case 1:
+        //         date+="월";
+        //         break;
+        //     case 2:
+        //         date+="화";
+        //         break;
+        //     case 3:
+        //         date+="수";
+        //         break;
+        //     case 4:
+        //         date+="목";
+        //         break;
+        //     case 5:
+        //         date+="금";
+        //         break;
+        //     case 6:
+        //         date+="토";
+        //         break;
+        // }
+        // alert(date);
+
+        // var func=function(){
+        //     var d=new Date();
+        //     var year=d.getFullYear();
+        //     var month=d.getMonth()+1;
+        //     var day=d.getDay();
+        //     var hour = d.getHours(); 
+        //     var min = d.getMinutes();
+        //     var sec = d.getSeconds();
+        //     var milisec = d.getMilliseconds();     
+            
+        //     month = (month > 9 ? "" : "0") + month;
+        //     // date = (date > 9 ?"":"0") +date;
+        //     hour = (hour > 9 ?"":"0") +hour;
+        //     min = (min > 9 ?"":"0") +min;
+        //     sec = (sec > 9 ?"":"0") +sec;
+        //     var datestr;
+        //     switch (day) {
+        //         case 0: datestr = "일"; break;
+        //         case 1: datestr = "월"; break;
+        //         case 2: datestr = "화"; break;
+        //         case 3: datestr = "수"; break;
+        //         case 4: datestr = "목"; break;
+        //         case 5: datestr = "금"; break;
+        //         case 6: datestr = "토"; break;
+        //     }
+        //     return year+"-"+month+"-"+day+":("+datestr+") "+hour+":"+min+":"+sec+":"+milisec;
+        //         }
+        //         setInterval(function () {
+        //             document.body.innerHTML = func();
+        //         }, 10);
+
+            var coms="com1,com2,com3";
+            var arr=coms.split(",");
+
+            for(var i=0;i<arr.length;i++){
+                console.log(arr[i]);
+            }
+    </script>
+</body>
+
+</html>

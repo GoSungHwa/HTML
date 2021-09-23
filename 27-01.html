@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 생성</title>
+    <script>
+        window.onload=function(){
+            //노드 생성
+            var n1=document.createElement("h1");
+            var n2=document.createElement("img");
+            var n3=""; //element로 생성된 것이 아니므로 appendChild 불가
+            var t1=document.createTextNode("hello");
+
+            //생성된 노드를 연결
+            n1.appendChild(t1);
+            document.body.appendChild(n1);
+            n2.src="https://via.placeholder.com/45";
+            n2.width=200;
+            n2.height=100;
+            document.body.appendChild(n2);
+
+            n3+="<ul>";
+            n3+="<li>JavaScript</li>";
+            n3+="<li>DOM</li>";
+            n3+="<li>jQuery</li>";
+            n3+="</ul>";
+            // document.body.appendChild(n3);   element로 생성된 것이 아니므로 appendChild 불가
+            document.getElementById("forInner").innerHTML=n3;
+                var title_1 = document.getElementById('title_1');
+                var title_2 = document.getElementById('title_2');
+                console.log(title_1);
+
+                // document.body.innerHTML=n3;
+
+                var h1element=document.getElementsByTagName("h1");
+                console.log(h1element);
+                console.log(h1element[0]);
+                console.log(h1element[1]);
+                h1element[1].innerHTML="JS";
+                h1element[2].innerHTML="배열에 새로운거 추가 되나요? 네 되네용";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title_1">TITLE</h1>
+    <h1 id="title_2">JavaScript</h1>
+    <p id="forInner">기존 p태그 inner</p>
+</body>
+</html>

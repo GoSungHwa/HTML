@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 이벤트</title>
+</head>
+<body>
+    <script>
+        function frmAction(){
+            var v1=document.getElementById("id1").value;
+            if(v1.length>=3){
+                return true; //submit 기능 이어서 실행
+            }else{
+                alert("3자리 이상 입력해주세요");
+                document.getElementById("id1").value="";
+                return false;
+            }
+        }
+    </script>
+
+    <form action="#" method="GET">
+        <input type="text" name="a1" id="id1">
+        <!-- a1에 입력된 값이 3자 이상이면 action으로 이동
+            즉, submit 가능, 아니라면 alert 창으로 경고메시지뿌리고 a1다시 입력 -->
+        <input type="submit" onclick="return frmAction();">
+        <input type="reset">
+    </form>
+</body>
+</html>

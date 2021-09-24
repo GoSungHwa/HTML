@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 시작 CDN</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        //JS 방법
+         // window.onload=function(){  
+        //     document.getElementById("btn1").onclick=f1;
+        //     function f1(){
+        //         document.getElementById("content").innerHTML="<h1>제목부분</h1>";
+        //     }
+
+        $(function(){   //jQuery 방법
+            //JQuery 장점
+            $("button").click(f1); // $("셀렉터").click(콜백함수);
+            function f1(){
+                console.log("f1진입");
+                $("#content").html("<h1>제목부분</h1>");
+            }
+        });       
+            
+        // $(function(){   //jQuery 방법
+        //     $("#btn1").click(f1); // $("셀렉터").click(콜백함수);
+        //     function f1(){
+        //         console.log("f1진입");
+        //         $("#content").html("<h1>제목부분</h1>");
+        //     }
+        // });       
+    </script>
+</head>
+<body>
+    <div id="content">컨텐츠 부분</div>
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+    <button id="btn4">버튼4</button>
+</body>
+</html>

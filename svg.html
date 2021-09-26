@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg요소</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect x="10" y="10" height="100" width="100"
+        style="stroke: #ff0000; fill: #0000ff;"/>
+    </svg>
+
+    <!-- object 요소 사용 -->
+    <object data="/svg/examples.svg" width="300" height="100" type="image/svg+xml"
+    codebase="gttp://www.addobe.com/svg/viewer/install/"/>
+
+    <!-- embed 요소 사용 -->
+    <embed src="svg/examples.svg" width="500" height="200" type="image/svg+xml"
+    pluginspage="http://www.adobe.com/svg/viewr/install"/>
+
+    <!-- iframe 요소 사용 -->
+    <iframe src="svg/examples.svg" width="300" height="100"></iframe>
+
+</body>
+</html>

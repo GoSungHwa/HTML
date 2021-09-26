@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg와 스크립트</title>
+    <script>
+        var svgDocument;
+        var svgns = "http://w3.org/2000/svg";
+        var xlinkns = "http://www.w3.org/1999/xlink";
+        function startup(evt) {
+            P = document.getElementById("P");
+            CL = document.getElementById("CL");
+            animate();
+            stop("S");
+            stop("L");
+        }
+        limit = 720;
+        blu = 4;
+        running = true;
+        function animate() {
+            if (!running) return;
+
+            B = "rotate(" + blu + "360 150)";
+            C = "rotate(" + (blu / 2) + "360 150)";
+            CL.setAttribute("transform", B);
+
+            P.setAttribute("transform", C);
+            blu = blu + speed;
+            if ((blulimit)) speed = -speed;
+            window.setTimeout("animate()", 10);
+        }
+        runAnim = new Object;
+        runAnim["S"] = false;
+        runAnim["L"] = false;
+        function stop(id) {
+            if(runAnim[id]){
+            document.getElementById(id).firstChild.nextSibling.endElement()
+            document.getElementById("E" + id).endElement() 
+        }
+else {
+                document.getElementById(id).firstChild.nextSibling.beginElement()
+                document.getElementById("E" + id).beginElement()
+            }
+            runAnim[id] = !runAnim[id]
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

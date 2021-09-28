@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>timver show hide</title>
+</head>
+<body>
+    <h1>Stop Watch</h1>
+    <button id="btnStart">시작하기</button>
+    <button id="btnPause">멈추기</button>
+    <button id="btnRecord">기록</button>
+    <button id="btnStop">정지</button>
+    <div id="a1"></div>
+    <hr>
+    <h1>기록</h1>
+    <div id="a3">
+        <button id="btnShow">펼치기</button>
+        <button id="btnHide">숨기기</button>
+    </div>
+
+
+    <script>
+        let interval1=0;
+        let sec=0;
+    
+        $("#btnStart").click(startWatch);
+        $("#btnPause").click(pauseWatch);
+        $("#btnStop").click(stopWatch);
+        $("#btnRecord").click(stopRecord);
+        $("#btnShow").click(function(){
+            $(this).next().nextAll().show(1000);
+        });
+        $("#btnHide").click(function(){
+            $(this).nextAll().hide(1000);
+        });
+
+        function stopRecord(){
+            var contentEle="<p> "+ sec +"초 </p>";
+            $("#a3").append(contentEle);
+        }
+        
+        function startWatch(){
+             interval1=setInterval(function(){
+            sec++;
+            var contentEle="<p> "+ sec +"초 </p>";
+            $("#a1").html(contentEle);
+        },100);
+        }
+
+        function pauseWatch(){
+            clearInterval(interval1);
+        }
+
+        function stopWatch(){
+            sec=0;
+           clearInterval(interval1);
+           var contentEle="<p>"+sec+"초</p>";
+            $("#a1").html(contentEle); //이 부분 없을때 꼭 비교
+        //    $("#a1").html(" "); //이부분 없을때 있을때 꼭 비교
+        }
+
+
+        
+    </script>
+</body>
+</html>
